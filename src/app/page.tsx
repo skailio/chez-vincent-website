@@ -8,6 +8,8 @@ import { Reviews } from "@/components/sections/reviews";
 import { Info } from "@/components/sections/info";
 import { Home, Info as InfoIcon, ShoppingBag, Star } from "lucide-react";
 
+import { Categories } from "@/components/sections/categories";
+
 export default function Page() {
     const navItems = [
         { name: 'Savoir-Faire', url: '#about-section', icon: Home },
@@ -17,12 +19,16 @@ export default function Page() {
     ];
 
     return (
-        <main className="min-h-screen bg-dark">
+        <main className="min-h-screen bg-dark relative">
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-felt.png')] opacity-50 pointer-events-none fixed z-0"></div>
             <Hero />
-            <AboutUsSection />
-            <Products />
-            <Reviews />
-            <Info />
+            <div className="relative z-10">
+                <Categories />
+                <AboutUsSection />
+                <Products />
+                <Reviews />
+                <Info />
+            </div>
 
             <NavBar items={navItems} className="block" />
 

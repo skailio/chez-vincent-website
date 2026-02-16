@@ -52,11 +52,12 @@ const config = {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))",
                 },
-                // Custom colors for Chez Vincent
-                bordeaux: "#800020",
+                // Custom colors for Chez Vincent (Redesign)
+                bordeaux: "#e31b23", // Vibrant Red from reference
                 gold: "#c5a059",
-                dark: "#111111",
+                dark: "#1a0f0f", // Deep Dark Brown/Black from reference
                 parchment: "#f4e4bc",
+                "dark-accent": "#2a1515", // Slightly lighter dark for cards
             },
             borderRadius: {
                 lg: "var(--radius)",

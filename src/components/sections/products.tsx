@@ -44,22 +44,26 @@ export function Products() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="group relative bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-colors duration-300 border border-white/5 hover:border-gold/50"
+                            className="group relative bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                         >
-                            <div className="aspect-[4/3] overflow-hidden">
+                            <div className="aspect-[4/3] overflow-hidden relative">
                                 <img
                                     src={product.image}
                                     alt={product.title}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
                             </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-heading font-bold mb-3 text-white group-hover:text-gold transition-colors">
+                            <div className="p-8 text-center">
+                                <h3 className="text-2xl font-heading font-bold mb-3 text-dark group-hover:text-bordeaux transition-colors">
                                     {product.title}
                                 </h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">
+                                <p className="text-gray-600 text-sm leading-relaxed mb-6">
                                     {product.description}
                                 </p>
+                                <button className="text-bordeaux font-bold uppercase text-xs tracking-widest border-b-2 border-bordeaux/20 pb-1 group-hover:border-bordeaux transition-all">
+                                    Découvrir
+                                </button>
                             </div>
                         </motion.div>
                     ))}
