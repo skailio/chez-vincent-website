@@ -34,11 +34,11 @@ export function NavBar({ items, className }: NavBarProps) {
     return (
         <div
             className={cn(
-                "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
+                "fixed bottom-0 sm:top-5 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
                 className,
             )}
         >
-            <div className="flex items-center gap-3 bg-background/80 border border-white/10 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
+            <div className="flex items-center gap-3 bg-[#0a0505]/90 border border-white/5 backdrop-blur-xl py-1 px-1 rounded-full shadow-2xl">
                 {items.map((item) => {
                     const Icon = item.icon
                     const isActive = activeTab === item.name
@@ -57,8 +57,8 @@ export function NavBar({ items, className }: NavBarProps) {
                             }}
                             className={cn(
                                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
-                                "text-white/60 hover:text-bordeaux",
-                                isActive && "bg-white/10 text-bordeaux",
+                                "text-gray-400 hover:text-bordeaux/80",
+                                isActive && "bg-white/5 text-bordeaux",
                             )}
                         >
                             <span className="hidden md:inline">{item.name}</span>
@@ -68,7 +68,7 @@ export function NavBar({ items, className }: NavBarProps) {
                             {isActive && (
                                 <motion.div
                                     layoutId="lamp"
-                                    className="absolute inset-0 w-full bg-bordeaux/5 rounded-full -z-10"
+                                    className="absolute inset-0 w-full bg-white/5 rounded-full -z-10"
                                     initial={false}
                                     transition={{
                                         type: "spring",
