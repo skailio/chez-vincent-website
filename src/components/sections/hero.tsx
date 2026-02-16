@@ -17,16 +17,19 @@ export function Hero() {
 
     return (
         <section ref={ref} id="hero" className="relative min-h-[90vh] w-full overflow-hidden flex items-center justify-center bg-dark">
-            {/* Background Texture/Image */}
+            {/* Background Texture/Image with Cinematic Zoom */}
             <motion.div
                 style={{ y }}
-                className="absolute inset-0 z-0 opacity-40"
+                className="absolute inset-0 z-0 opacity-40 overflow-hidden"
             >
-                <div
+                <motion.div
+                    initial={{ scale: 1 }}
+                    animate={{ scale: 1.1 }}
+                    transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
                     className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: "url('/assets/images/hero_shop.svg')" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/50 to-dark" />
+                <div className="absolute inset-0 bg-gradient-to-b from-dark/90 via-dark/50 to-dark" />
             </motion.div>
 
             {/* Decorative Floating Elements (Ingredients) - Placeholders */}

@@ -44,7 +44,7 @@ export function Products() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="group relative bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                            className="group relative bg-[#1a1212] border border-white/5 rounded-xl overflow-hidden shadow-2xl hover:shadow-gold/10 hover:-translate-y-2 transition-all duration-300"
                         >
                             <div className="aspect-[4/3] overflow-hidden relative">
                                 <img
@@ -52,16 +52,19 @@ export function Products() {
                                     alt={product.title}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+
+                                {/* Gold Border overlay on hover */}
+                                <div className="absolute inset-0 border-2 border-gold/0 group-hover:border-gold/50 transition-all duration-300 z-10 rounded-xl m-2" />
                             </div>
-                            <div className="p-8 text-center">
-                                <h3 className="text-2xl font-heading font-bold mb-3 text-dark group-hover:text-bordeaux transition-colors">
+                            <div className="p-8 text-center relative z-20">
+                                <h3 className="text-2xl font-heading font-bold mb-3 text-white group-hover:text-gold transition-colors underline-offset-4 decoration-gold/0 group-hover:decoration-gold/100">
                                     {product.title}
                                 </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6 font-light">
                                     {product.description}
                                 </p>
-                                <button className="text-bordeaux font-bold uppercase text-xs tracking-widest border-b-2 border-bordeaux/20 pb-1 group-hover:border-bordeaux transition-all">
+                                <button className="text-gold font-bold uppercase text-xs tracking-[0.2em] border-b border-gold/30 pb-2 group-hover:border-gold group-hover:tracking-[0.3em] transition-all duration-300">
                                     Découvrir
                                 </button>
                             </div>
