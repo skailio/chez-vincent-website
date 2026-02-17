@@ -27,7 +27,7 @@ export function Hero() {
                     animate={{ scale: 1.1 }}
                     transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: "url('/assets/images/hero_shop.svg')" }}
+                    style={{ backgroundImage: "url('https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?q=80&w=2000&auto=format&fit=crop')" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-dark/90 via-dark/50 to-dark" />
             </motion.div>

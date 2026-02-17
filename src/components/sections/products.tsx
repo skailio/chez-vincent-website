@@ -5,22 +5,22 @@ import { motion } from "framer-motion";
 const products = [
     {
         id: 1,
-        title: "Viandes Sélectionnées",
-        description: "Des pièces de bœuf, veau, agneau et porc choisies rigoureusement pour leur tendreté et leur goût.",
-        image: "/assets/images/meat_selection.svg",
+        title: "Nos Viandes d'Exception",
+        description: "Sélection rigoureuse de races à viande (Limousine, Blonde d'Aquitaine) maturées sur carcasse pour une tendreté et un goût incomparables.",
+        image: "https://images.unsplash.com/photo-1615937691194-97cafc3bc299?q=80&w=800&auto=format&fit=crop"
     },
     {
         id: 2,
         title: "Charcuterie Artisanale",
-        description: "Saucissons, terrines et pâtés faits maison dans le respect des traditions.",
-        image: "/assets/images/charcuterie.svg",
+        description: "Pâtés, terrines, rillettes et saucisses fabriqués maison selon des recettes traditionnelles transmises de père en fils.",
+        image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=800&auto=format&fit=crop"
     },
     {
         id: 3,
-        title: "Fait Maison",
-        description: "Des plats cuisinés chaque jour pour régaler vos repas de famille ou vos déjeuners.",
-        image: "/assets/images/homemade.svg",
-    },
+        title: "Plats Traiteur",
+        description: "Des plats cuisinés chaque jour avec des produits frais : gratins, lasagnes, parmentiers et spécialités de saison.",
+        image: "https://images.unsplash.com/photo-1587593810167-a84920ea0781?q=80&w=800&auto=format&fit=crop"
+    }
 ];
 
 export function Products() {
